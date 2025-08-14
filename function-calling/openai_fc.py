@@ -48,7 +48,7 @@ else:
     print(f"Unknown function: {response.output['name']}")
 
 input_messages.append(call_info)  # append model's function call message
-input_messages.append({                               # append result message
+input_messages.append({           # append result message
     "type": "function_call_output",
     "call_id": call_info.call_id,
     "output": str(result)
